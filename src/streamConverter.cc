@@ -18,6 +18,7 @@
 #include <algorithm>
 #include <map>
 #include "streamConverter.h"
+#include <string>
 
 streamConverter::streamConverter(streamType common_type){
 	this->common_type = common_type;
@@ -64,7 +65,7 @@ int streamConverter::convertWorker(void *in_data, int num_bytes, streamType seco
 			conversion_map[secondary_type].cnv_from_common = getConversionFunc(common_type, secondary_type);
 		}
 	}
-	
+
 	//Call the actual conversion function
 	if(convert_to)
 		conversion_map[secondary_type].cnv_to_common(in_data, (void*)(end_pointer+num_consumed_bytes), scratchspace_map[secondary_type].scratchspace);

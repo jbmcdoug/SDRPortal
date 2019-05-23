@@ -44,13 +44,14 @@ add_custom_command(
 	DEPENDS genc
 )
 
-target_link_libraries(sdrportalShared	
+target_link_libraries(sdrportalShared
 	${LIBHACKRF_LIBRARIES}
 	${LIBRTLSDR_LIBRARIES}
 	${UHD_LIBRARIES}
+	${Boost_LIBRARIES}
 )
 
-target_link_libraries(uhdd 
+target_link_libraries(uhdd
 	sdrportalShared
 	${CMAKE_THREAD_LIBS_INIT}
 )

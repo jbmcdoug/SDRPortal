@@ -35,6 +35,8 @@ find_package(UHD)
 find_package(LibHackRF)
 find_package(LibRTLSDR)
 find_package(Portaudio)
+find_package(Boost REQUIRED COMPONENTS filesystem system)
+
 
 #Add in debugging symbols for now... TODO: Get rid of debugging symbols
 set(CMAKE_CXX_FLAGS "-g -Wall -std=c++0x")

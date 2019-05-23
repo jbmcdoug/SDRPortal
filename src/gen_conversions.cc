@@ -66,6 +66,7 @@ int main(int argc, char *argv[]){
 
 		//Now work on the implementation stuff, starting with appropriate headers
 		out_impl << "#include <algorithm>" << endl;
+		out_impl << "#include <string>" << endl;
 		out_impl << "#include \"" << argv[2] << "\"" << endl << endl;
 
 		//Now create all of the N^2 conversion functions
